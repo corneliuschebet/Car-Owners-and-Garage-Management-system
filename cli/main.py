@@ -9,7 +9,7 @@ def cli():
     """Car Garage Management CLI"""
     pass
 
-# ----- OWNER COMMANDS -----
+
 
 @cli.command()
 @click.option('--name', prompt='Owner name')
@@ -25,7 +25,6 @@ def list_owners():
     for owner in owners:
         click.echo(owner)
 
-# ----- CAR COMMANDS -----
 
 @cli.command()
 @click.option('--make', prompt='Car make')
@@ -36,9 +35,9 @@ def list_owners():
 def add_car(make, model, year, license, owner_id):
     car = create_car(make, model, year, license, owner_id)
     if car:
-        click.echo(f"🚗 Car created: {car}")
+        click.echo(f"Car created: {car}")
     else:
-        click.echo("❌ Owner ID not found.")
+        click.echo("Owner ID not found.")
 
 @cli.command()
 def list_cars():
@@ -52,11 +51,11 @@ def list_cars():
 def link_car(car_id, garage_id):
     car = link_car_to_garage(car_id, garage_id)
     if car:
-        click.echo(f"🔗 Car linked to garage: {car}")
+        click.echo(f"Car linked to garage: {car}")
     else:
-        click.echo("❌ Invalid car or garage ID.")
+        click.echo("Invalid car or garage ID.")
 
-# ----- GARAGE COMMANDS -----
+
 
 @cli.command()
 @click.option('--name', prompt='Garage name')
