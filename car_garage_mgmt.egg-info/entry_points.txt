@@ -1,0 +1,8 @@
+[console_scripts]
+add-car = cli.main:add_car
+add-garage = cli.main:add_garage
+add-owner = cli.main:add_owner
+link-car = cli.main:link_car
+list-cars = cli.main:list_cars
+list-garages = cli.main:list_garages
+list-owners = cli.main:list_owners
